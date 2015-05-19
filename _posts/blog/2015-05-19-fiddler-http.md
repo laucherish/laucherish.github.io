@@ -8,19 +8,19 @@ tags: [Fiddler, Android, Genymotion, 抓包]
 date: 2015-05-19 10:00:00
 --- 
 
-##下载安装Fiddler
+## 下载安装Fiddler
 下载并安装Fiddler，运行软件，Fiddler默认的代理地址是127.0.0.1，端口为8888。我们此时已经可以对电脑的网络请求进行抓包。但是如果要对Android模拟器的网络请求进行抓包，还需要进行如下设置。
 
 笔者使用的是Genymotion模拟器，Android原生模拟器的设置方法也大体相同。
-##1.打开Settings（设置），点击Wi-Fi。
+## 1.打开Settings（设置），点击Wi-Fi。
 
 ![设置](/images/2015-05-19-fiddler-http/device-2015-04-27-105348.png)
 
-##2.长按WiredSSID，选择Modify network（修改网络）
+## 2.长按WiredSSID，选择Modify network（修改网络）
 
 ![修改网络](/images/2015-05-19-fiddler-http/device-2015-04-27-105444.png)
 
-##3.勾上Show advanced options，输入代理服务器地址和端口。
+## 3.勾上Show advanced options，输入代理服务器地址和端口。
 
 ![代理](/images/2015-05-19-fiddler-http/device-2015-04-27-105513.png)
 

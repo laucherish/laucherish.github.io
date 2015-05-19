@@ -2,12 +2,13 @@
 layout: home
 ---
 
-<div class="index-content project">
+<div class="index-content col3">
     <div class="section">
         <ul class="artical-cate">
-            <li><a href="/"><span>Blog</span></a></li>
-            <li style="text-align:center"><a href="/tech"><span>Tech</span></a></li>
-            <li class="on" style="text-align:right"><a href="/life"><span>Life</span></a></li>
+            <li><a href="/"><span>博客</span></a></li>
+            <li><a href="/tech"><span>科技</span></a></li>
+            <li class="on"><a href="/life"><span>生活</span></a></li>
+            <li><a href="/archive.html"><span>时间线</span></a></li>
         </ul>
 
         <div class="cate-bar"><span id="cateBar"></span></div>

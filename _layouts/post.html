@@ -8,7 +8,7 @@ layout: default
     @media screen and (max-width: 750px){
         body { background:#fff; }
     }
-    @media screen and (max-width: 1020px){
+    @media screen and (max-width: 1025px){
         body { background:#fff; }
     }
 </style>
@@ -17,35 +17,80 @@ layout: default
     <div class="entry">
         <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
         <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
+        
+        {% if page.description != null %}
+        <pre>{{ page.description }}</pre>
+        {% endif %}
+
         {{ content }}
+        
+        <blockquote style="margin-bottom:1%">
+          <p>
+          <strong>LanternD</strong>  <br>
+          <img align="left" src="/img/LanternD_Logo.png" width="217px" height="60px" alt="LanternD_Logo" title="LanternD's Signature"><br></p><br><br><br>
+        </blockquote>
+
+        {% include pagination.html %}
+
+        <div class="footer-navi">
+            <a href="/archive.html"><i class="fa fa-archive"></i> 归档</a>　
+            <a href="/tags"><i class="fa fa-tags"></i> 标签</a>
+        </div>
+
+        {% include comment.html %}
+    </div>
+
+    {% include swiftype.html %}
+
+    <div class="sidenav">
+        <a href="/rss.xml" class="rss">RSS订阅</a>
+        <hr>
+        <h2>图书馆分类法</h2>
+        <ul class="artical-list">
+            <li><a href="/">博客</a></li>
+            <li><a href="/tech">科技</a></li>
+            <li><a href="/life">生活</a></li>
+            <hr>
+            <li><a href="/archive.html"><i class="fa fa-archive"></i> <strong>时间线</strong></a></li>
+            <li><a href="/tags"><i class="fa fa-tags"></i> <strong>标签云</strong></a></li>
+        </ul>
+
     </div>
 
     <div class="sidenav">
-        <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=75&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=1835673462&verifier=58d50f04&dpc=1"></iframe>
+        <h2>更多关于『{{page.categories.first}}』的文章</h2>
+        <ul class="artical-list">
+
+        {% case page.categories.first %}
+
+            {% when 'blog' %}
+                {% for post in site.categories.blog limit:15%}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+
+            {% when 'hitech' %}
+                {% for post in site.categories.tech limit:15 %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+
+            {% when 'viewfinder' %}
+                {% for post in site.categories.life limit:15 %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+
+            {% else %}
+                {% for post in site.related_posts limit:15 %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+        {% endcase %}
+        </ul>
     </div>
+</div>
 
-    <div class="sidenav">
-        <h2>Blog</h2>
-        <ul class="artical-list">
-        {% for post in site.categories.blog%}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
-
-        <h2>Tech</h2>
-        <ul class="artical-list">
-        {% for post in site.categories.tech%}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
-
-        <h2>Life</h2>
-        <ul class="artical-list">
-        {% for post in site.categories.life%}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
-    </div>
+<div class="back-top" title="返回顶部">
+    <button class="btn btn-primary">
+      <i class="fa fa-lg fa-chevron-up" style="color:#0e0e0e"></i>
+    </button>
 </div>
 
 <script src="/js/post.js" type="text/javascript"></script>

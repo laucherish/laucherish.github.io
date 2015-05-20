@@ -6,4 +6,5 @@
   ga('create', '{{ site.ga.id }}', 'auto');
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
+  ga(‘set’, ‘&uid’, {{USER_ID}}); // 使用已登录的 user_id 来设置用户 ID。
 </script>

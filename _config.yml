@@ -30,12 +30,12 @@ favicon: http://lanternd.qiniudn.com/favicon.ico
 
 # google analytics 设置
 ga:
-  id: UA-54601036-1
-  url: http://dlyang.me
+  id: UA-63176013-1
+  url: http://laucherish.github.io
   userid: 54601036
 
 disqus:
-  shortname: lanternd
+  shortname: laucherish
 
 duoshuo:
   shortname: dlyang

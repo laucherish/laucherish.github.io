@@ -1,4 +1,5 @@
 <!-- 多说的js代码 Start -->
+<!--
 <script>var duoshuoQuery = {short_name:"{{ site.duoshuo.shortname }}"};</script>
 <script src="http://static.duoshuo.com/embed.js"></script>
 
@@ -17,13 +18,15 @@ function toggleDuoshuoComments(container){
     jQuery(container).append(el);
 }
 </script>
+-->
 <!-- 多说的js代码 End-->
+
 <!-- 如果其中一个不用的可以自己注释掉，以提高访问速度，记得把里面的变量名给改了。 -->
 <!-- Disqus的js代码 Start-->
 
 <script type="text/javascript">
 
-    var disqus_shortname = 'lanternd'; // required: replace example with your forum shortname
+    var disqus_shortname = 'laucherish'; // required: replace example with your forum shortname
 
 function toggleDisqusComments(container){
     if(jQuery(container).has("div").length>0){
@@ -33,7 +36,7 @@ function toggleDisqusComments(container){
     var disqus_shortname = '{{ site.disqus.shortname }}';
     var disqus_identifier = '{{page.id | remove:'/'}}';
     var disqus_title = '{{page.title}}';
-    var disqus_url = 'http://dlyang.me{{page.url}}';
+    var disqus_url = 'http://laucherish.github.io{{page.url}}';
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
@@ -44,6 +47,7 @@ function toggleDisqusComments(container){
 
 <!-- 以下是评论框架，放置在评论需要展示的地方 -->
 
+<!--
 <br>
 <div id="duoshuo_container">
     <div>
@@ -54,6 +58,7 @@ function toggleDisqusComments(container){
 
     <div id="comment-box-duoshuo" ></div>
 </div>
+-->
 
 <div id="disqus_container">
     <div style="margin-bottom:20px" class="right"></div>

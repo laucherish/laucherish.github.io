@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  使用Fiddler对Android模拟器网络请求进行抓包
-description: Fiddler是一个很好的网络抓包工具，使用其对Android模拟器的网络请求进行抓包
+description: Fiddler是一个很好的网络抓包工具，使用其对Android模拟器网络请求进行抓包
 permalink: /fiddler-http/
 categories: [blog, 博客]
 tags: [Fiddler, Android, Genymotion, 抓包]

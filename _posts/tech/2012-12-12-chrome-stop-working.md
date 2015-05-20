@@ -6,7 +6,6 @@ permalink: /chrome-stop-working/
 categories: [tech, 科技]
 tags: [Chrome, 假死]
 date: 2012-12-12
-thread: 2012121200
 --- 
 
 ## Problem 
